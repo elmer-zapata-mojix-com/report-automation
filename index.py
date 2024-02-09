@@ -7,6 +7,7 @@ from dash.exceptions import PreventUpdate
 import pandas as pd
 import numpy as np
 import pathlib
+import os
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("./data").resolve()
@@ -2236,4 +2237,4 @@ def update_graph(select_month):
 
 
 if __name__ == "__main__":
-    app.run_server(debug = True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
