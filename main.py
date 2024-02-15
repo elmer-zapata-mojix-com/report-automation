@@ -21,7 +21,7 @@ DATA_PATH = PATH.joinpath("./data").resolve()
 data = pd.read_csv(DATA_PATH.joinpath('results.csv'), header=0)
 
 dash_app.layout = html.Div([
-    html.H1(children='Automation results Elektra release', style={'textAlign': 'center'}),
+    html.H1(children='Automation Results Elektra Release', style={'textAlign': 'center'}),
     html.Div([dash_table.DataTable(
         data=data.to_dict('records'),
         sort_action='native',
@@ -37,6 +37,8 @@ dash_app.layout = html.Div([
             {'name': 'RECEIVING', 'id': 'RECEIVING', 'type': 'any'},
             {'name': 'SHIPPING', 'id': 'SHIPPING', 'type': 'any'},
             {'name': 'PACKING', 'id': 'PACKING', 'type': 'any'},
+            {'name': 'API_CALLS', 'id': 'API_CALLS', 'type': 'any'},
+            {'name': 'REASON', 'id': 'REASON', 'type': 'any'},
         ],
         editable=True,
         style_data_conditional=[
@@ -53,6 +55,15 @@ dash_app.layout = html.Div([
                                        'if': {'column_id': field_name,
                                               'filter_query': ' {' + field_name + '} eq "FAILED"'},
                                        'color': 'red'
+                                   } for field_name in data.columns
+                               ]
+                               +
+                               [
+
+                                   {
+                                       'if': {'column_id': field_name,
+                                              'filter_query': ' {' + field_name + '} eq "Missing"'},
+                                       'color': 'skyblue'
                                    } for field_name in data.columns
                                ]
     )]),
