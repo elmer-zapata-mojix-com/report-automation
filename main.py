@@ -11,12 +11,14 @@ import numpy as np
 import pathlib
 import os
 
+
+app = Dash(__name__)
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("./data").resolve()
 
 data = pd.read_csv(DATA_PATH.joinpath('results.csv'), header=0)
 
-app = Dash(__name__)
+
 
 app.layout = html.Div([
     html.H1(children='Automation results Elektra release', style={'textAlign': 'center'}),
