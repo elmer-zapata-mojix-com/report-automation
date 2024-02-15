@@ -20,42 +20,42 @@ DATA_PATH = PATH.joinpath("./data").resolve()
 
 data = pd.read_csv(DATA_PATH.joinpath('results.csv'), header=0)
 
-
-
-app.layout = html.Div([
+dash_app.layout = html.Div([
     html.H1(children='Automation results Elektra release', style={'textAlign': 'center'}),
     html.Div([dash_table.DataTable(
-    data=data.to_dict('records'),
-    sort_action='native',
-    columns=[
-        {'name': 'TENANT', 'id': 'TENANT', 'type': 'any', 'editable': False},
-        {'name': 'SOH', 'id': 'SOH', 'type': 'any', 'editable': False},
-        {'name': 'ENCODE', 'id': 'ENCODE', 'type': 'text'},
-        {'name': 'IDENTIFY', 'id': 'IDENTIFY', 'type': 'text'},
-        {'name': 'LOOKUP', 'id': 'LOOKUP', 'type': 'text'},
-        {'name': 'SEARCHANDPICK', 'id': 'SEARCHANDPICK', 'type': 'any'},
-        {'name': 'INVENTORY', 'id': 'INVENTORY', 'type': 'any'},
-        {'name': 'UPDATE_INVENTORY', 'id': 'UPDATE_INVENTORY', 'type': 'any'},
-        {'name': 'RECEIVING', 'id': 'RECEIVING', 'type': 'any'},
-        {'name': 'SHIPPING', 'id': 'SHIPPING', 'type': 'any'},
-        {'name': 'PACKING', 'id': 'PACKING', 'type': 'any'},
-    ],
-    editable=True,
-    style_data_conditional=[
-                               {
-                                   'if': {'column_id': field_name, 'filter_query': ' {' + field_name + '} eq "PASSED"'},
-                                   'color': 'green'
-                               } for field_name in data.columns
-                           ]
-                           +
-                           [
+        data=data.to_dict('records'),
+        sort_action='native',
+        columns=[
+            {'name': 'TENANT', 'id': 'TENANT', 'type': 'any', 'editable': False},
+            {'name': 'SOH', 'id': 'SOH', 'type': 'any', 'editable': False},
+            {'name': 'ENCODE', 'id': 'ENCODE', 'type': 'text'},
+            {'name': 'IDENTIFY', 'id': 'IDENTIFY', 'type': 'text'},
+            {'name': 'LOOKUP', 'id': 'LOOKUP', 'type': 'text'},
+            {'name': 'SEARCHANDPICK', 'id': 'SEARCHANDPICK', 'type': 'any'},
+            {'name': 'INVENTORY', 'id': 'INVENTORY', 'type': 'any'},
+            {'name': 'UPDATE_INVENTORY', 'id': 'UPDATE_INVENTORY', 'type': 'any'},
+            {'name': 'RECEIVING', 'id': 'RECEIVING', 'type': 'any'},
+            {'name': 'SHIPPING', 'id': 'SHIPPING', 'type': 'any'},
+            {'name': 'PACKING', 'id': 'PACKING', 'type': 'any'},
+        ],
+        editable=True,
+        style_data_conditional=[
+                                   {
+                                       'if': {'column_id': field_name,
+                                              'filter_query': ' {' + field_name + '} eq "PASSED"'},
+                                       'color': 'green'
+                                   } for field_name in data.columns
+                               ]
+                               +
+                               [
 
-                               {
-                                   'if': {'column_id': field_name, 'filter_query': ' {' + field_name + '} eq "FAILED"'},
-                                   'color': 'red'
-                               } for field_name in data.columns
-                           ]
-)]),
+                                   {
+                                       'if': {'column_id': field_name,
+                                              'filter_query': ' {' + field_name + '} eq "FAILED"'},
+                                       'color': 'red'
+                                   } for field_name in data.columns
+                               ]
+    )]),
     # dcc.Dropdown(data.TENANT.unique(), 'CENT', id='dropdown-selection'),
     # dcc.Graph(id='graph-content')
 ])
@@ -86,5 +86,3 @@ def update_graph(value):
 
 if __name__ == "__main__":
     dash_app.run_server(debug=True, port=8080)
-
-
