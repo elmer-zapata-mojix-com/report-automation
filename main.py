@@ -10,9 +10,11 @@ import pandas as pd
 import numpy as np
 import pathlib
 import os
+import dash
 
+dash_app = dash.Dash(__name__)
+app = dash_app.server
 
-app = Dash(__name__)
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("./data").resolve()
 
@@ -83,5 +85,6 @@ def update_graph(value):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    dash_app.run_server(debug=True, port=8080)
+
 
