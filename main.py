@@ -18,10 +18,10 @@ app = dash_app.server
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("./data").resolve()
 
-data = pd.read_csv(DATA_PATH.joinpath('results.csv'), header=0)
+data = pd.read_csv(DATA_PATH.joinpath('results08032024_prod.csv'), header=0)
 
 dash_app.layout = html.Div([
-    html.H1(children='Automation Results Elektra Release', style={'textAlign': 'center'}),
+    html.H1(children='Automation Results Flash Release', style={'textAlign': 'center'}),
     html.Div([dash_table.DataTable(
         data=data.to_dict('records'),
         sort_action='native',
@@ -62,7 +62,7 @@ dash_app.layout = html.Div([
 
                                    {
                                        'if': {'column_id': field_name,
-                                              'filter_query': ' {' + field_name + '} eq "Missing"'},
+                                              'filter_query': ' {' + field_name + '} eq "N /A"'},
                                        'color': 'skyblue'
                                    } for field_name in data.columns
                                ]

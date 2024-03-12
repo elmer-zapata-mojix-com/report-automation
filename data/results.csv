@@ -1,16 +1,16 @@
 TENANT,SOH,ENCODE,IDENTIFY,LOOKUP,SEARCHANDPICK,INVENTORY,UPDATE_INVENTORY,RECEIVING,SHIPPING,PACKING,API_CALLS,REASON
-CENT,PASSED,FAILED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,Missing,Missing,Missing,
-CELINE,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,Missing,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,Celine needs VPN connection
-CHIP,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,Missing,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,need review the data in the workflow - create task
-FALA,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-FALACO,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,FAILED,Missing,
-FALAPE,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-FISIA,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-IVONNE,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-OECHSLE,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,it was fixed the name of tenant was different too
-PEI,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-PERN,PASSED,PASSED,FAILED,FAILED,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,It's necessary to review the products  used
-STUDIOF,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-TORRA,PASSED,PASSED,PASSED,Missing,Missing,PASSED,PASSED,PASSED,PASSED,PASSED,Missing,
-TOSCA,Missing,Missing,Missing,Missing,Missing,Missing,Missing,PASSED,PASSED,PASSED,PASSED,
-TRR,PASSED,PASSED,PASSED,PASSED,Missing,PASSED,FAILED,PASSED,PASSED,PASSED,Missing,It's necessary to review the products  used
+CENT,PASSED,FAILED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,N /A,N /A,N /A,
+CELINE,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,N /A,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,Celine needs VPN connection
+CHIP,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,N /A,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,need review the data in the workflow - create task
+FALA,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+FALACO,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,FAILED,N /A,
+FALAPE,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+FISIA,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+IVONNE,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+OECHSLE,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,it was fixed the name of tenant was different too
+PEI,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+PERN,PASSED,PASSED,FAILED,FAILED,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,It's necessary to review the products  used
+STUDIOF,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+TORRA,PASSED,PASSED,PASSED,N /A,N /A,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,
+TOSCA,N /A,N /A,N /A,N /A,N /A,N /A,N /A,PASSED,PASSED,PASSED,PASSED,
+TRR,PASSED,PASSED,PASSED,PASSED,N /A,PASSED,FAILED,PASSED,PASSED,PASSED,N /A,It's necessary to review the products  used
