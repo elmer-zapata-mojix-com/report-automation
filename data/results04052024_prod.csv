@@ -1,6 +1,6 @@
 TENANT,SOH,ENCODE,IDENTIFY,LOOKUP,SEARCHANDPICK,INVENTORY,UPDATE_INVENTORY,RECEIVING,SHIPPING,PACKING,API_CALLS,REASON
 CENT,PASSED,PASSED,N /A,N /A,N /A,FAILED,FAILED,FAILED,N /A,N /A,N /A,https://mojixinc.atlassian.net/browse/RPLAT-41518
-CELINE,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,It was not executed,N /A,N /A,It was not executed because is needed VPN
+CELINE,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,N /A,PASSED because is needed VPN
 CHIP,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,PASSED,N /A,N /A,https://mojixinc.atlassian.net/browse/RPLAT-41518
 FALA,PASSED,PASSED,PASSED,N /A,N /A,PASSED,FAILED,PASSED,N /A,N /A,N /A,https://mojixinc.atlassian.net/browse/RPLAT-41518
 FALACO,PASSED,PASSED,PASSED,N /A,N /A,PASSED,FAILED,PASSED,PASSED,PASSED,N /A,It was a missing configuration
