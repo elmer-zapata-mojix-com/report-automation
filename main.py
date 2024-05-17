@@ -21,7 +21,7 @@ DATA_PATH = PATH.joinpath("./data").resolve()
 data = pd.read_csv(DATA_PATH.joinpath('results08032024_prod.csv'), header=0)
 
 dash_app.layout = html.Div([
-    html.H1(children='Automation Results Flash Release', style={'textAlign': 'center'}),
+    html.H1(children='Automation Results Yoda Release', style={'textAlign': 'center'}),
     html.Div([dash_table.DataTable(
         data=data.to_dict('records'),
         sort_action='native',
