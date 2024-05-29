@@ -18,10 +18,10 @@ app = dash_app.server
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("./data").resolve()
 
-data = pd.read_csv(DATA_PATH.joinpath('results08032024_prod.csv'), header=0)
+data = pd.read_csv(DATA_PATH.joinpath('results24052024_heman_sandbox.csv'), header=0)
 
 dash_app.layout = html.Div([
-    html.H1(children='Automation Results Yoda Release', style={'textAlign': 'center'}),
+    html.H1(children='Automation Results He Man Release Sandbox', style={'textAlign': 'center'}),
     html.Div([dash_table.DataTable(
         data=data.to_dict('records'),
         sort_action='native',
@@ -38,6 +38,12 @@ dash_app.layout = html.Div([
             {'name': 'SHIPPING', 'id': 'SHIPPING', 'type': 'any'},
             {'name': 'PACKING', 'id': 'PACKING', 'type': 'any'},
             {'name': 'API_CALLS', 'id': 'API_CALLS', 'type': 'any'},
+            {'name': 'XML_PROCESS', 'id': 'XML_PROCESS', 'type': 'any'},
+            {'name': 'RECEIVING_TAGMANAGMENT', 'id': 'RECEIVING_TAGMANAGMENT', 'type': 'any'},
+            {'name': 'SENDING_TAGMANAGMENT', 'id': 'SENDING_TAGMANAGMENT', 'type': 'any'},
+            {'name': 'PREMISE_AUTO_CREATION', 'id': 'PREMISE_AUTO_CREATION', 'type': 'any'},
+            {'name': 'ENCODE_SUPPLYCHAIN', 'id': 'ENCODE_SUPPLYCHAIN', 'type': 'any'},
+            {'name': 'INSPECTING', 'id': 'INSPECTING', 'type': 'any'},
             {'name': 'REASON', 'id': 'REASON', 'type': 'any'},
         ],
         editable=True,
